@@ -41,8 +41,8 @@ namespace NoteApp
         public Note()
         {
             _title = "Без названия";
-            _text = " Текст заметки";
-            _categoryNote = CategoryNote.People;
+            _text = "";
+            _categoryNote = CategoryNote.Different;
             _dateOfCreation = DateTime.Now;
             _dateOfChange = DateTime.Now;
         }
@@ -100,10 +100,10 @@ namespace NoteApp
                 return _dateOfCreation;
             }
 
-            private set
+          /*  private set
             {
                 _dateOfCreation = DateTime.Now;
-            }
+            }*/
         }
 
         /// <summary>
@@ -146,7 +146,7 @@ namespace NoteApp
                 Title = Title,
                 Text = Text,
                 CategoryNote = CategoryNote,
-                DateOfCreation = DateOfCreation,
+                //DateOfCreation = DateOfCreation,
             };
         }
     }

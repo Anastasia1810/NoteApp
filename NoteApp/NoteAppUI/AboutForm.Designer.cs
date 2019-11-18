@@ -34,8 +34,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.GitHubLinkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.EmailLinkLabel2 = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // label1
@@ -94,35 +94,35 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "2019 Anastasia Smakotina";
             // 
-            // linkLabel1
+            // GitHubLinkLabel1
             // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(128, 134);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(108, 13);
-            this.linkLabel1.TabIndex = 6;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "smakotina98@mail.ru";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.GitHubLinkLabel1.AutoSize = true;
+            this.GitHubLinkLabel1.Location = new System.Drawing.Point(128, 134);
+            this.GitHubLinkLabel1.Name = "GitHubLinkLabel1";
+            this.GitHubLinkLabel1.Size = new System.Drawing.Size(108, 13);
+            this.GitHubLinkLabel1.TabIndex = 6;
+            this.GitHubLinkLabel1.TabStop = true;
+            this.GitHubLinkLabel1.Text = "smakotina98@mail.ru";
+            this.GitHubLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.GitHubLinkLabel1_LinkClicked);
             // 
-            // linkLabel2
+            // EmailLinkLabel2
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(71, 156);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(124, 13);
-            this.linkLabel2.TabIndex = 7;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Anastasia1810/NoteApp";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.EmailLinkLabel2.AutoSize = true;
+            this.EmailLinkLabel2.Location = new System.Drawing.Point(71, 156);
+            this.EmailLinkLabel2.Name = "EmailLinkLabel2";
+            this.EmailLinkLabel2.Size = new System.Drawing.Size(124, 13);
+            this.EmailLinkLabel2.TabIndex = 7;
+            this.EmailLinkLabel2.TabStop = true;
+            this.EmailLinkLabel2.Text = "Anastasia1810/NoteApp";
+            this.EmailLinkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.EmailLinkLabel2_LinkClicked);
             // 
             // AboutForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 258);
-            this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.EmailLinkLabel2);
+            this.Controls.Add(this.GitHubLinkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -147,7 +147,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel GitHubLinkLabel1;
+        private System.Windows.Forms.LinkLabel EmailLinkLabel2;
     }
 }

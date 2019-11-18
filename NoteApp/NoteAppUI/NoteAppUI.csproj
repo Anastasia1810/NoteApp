@@ -61,11 +61,11 @@
     <Compile Include="AddAndEditForm.Designer.cs">
       <DependentUpon>AddAndEditForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="WindowForm.cs">
+    <Compile Include="NoteAppForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="WindowForm.Designer.cs">
-      <DependentUpon>WindowForm.cs</DependentUpon>
+    <Compile Include="NoteAppForm.Designer.cs">
+      <DependentUpon>NoteAppForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -75,8 +75,8 @@
     <EmbeddedResource Include="AddAndEditForm.resx">
       <DependentUpon>AddAndEditForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="WindowForm.resx">
-      <DependentUpon>WindowForm.cs</DependentUpon>
+    <EmbeddedResource Include="NoteAppForm.resx">
+      <DependentUpon>NoteAppForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

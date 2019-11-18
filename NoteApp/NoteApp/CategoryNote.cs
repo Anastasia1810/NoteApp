@@ -9,6 +9,7 @@ namespace NoteApp
     /// </summary>
     public enum CategoryNote
     {
+        
         /// <summary>
         /// Работа
         /// </summary>
