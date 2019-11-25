@@ -100,10 +100,10 @@ namespace NoteApp
                 return _dateOfCreation;
             }
 
-             private set
-              {
-                  _dateOfCreation = DateTime.Now;
-              }
+          /*  private set
+            {
+                _dateOfCreation = DateTime.Now;
+            }*/
         }
 
         /// <summary>

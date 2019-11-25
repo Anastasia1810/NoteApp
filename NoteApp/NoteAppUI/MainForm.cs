@@ -6,7 +6,7 @@ using NoteApp;
 
 namespace NoteAppUI
 {
-    public partial class NoteAppForm : Form
+    public partial class MainForm : Form
     {
        
         /// <summary>
@@ -17,7 +17,7 @@ namespace NoteAppUI
         /// <summary>
         /// Конструктор
         /// </summary>
-        public NoteAppForm()
+        public MainForm()
         {
             InitializeComponent();
             AddCategoryBox();
@@ -69,7 +69,7 @@ namespace NoteAppUI
         /// <summary>
         /// Кнопка о программе в меню Help
         /// </summary>
-        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var aboutForm = new AboutForm();
             aboutForm.Show();
@@ -78,7 +78,7 @@ namespace NoteAppUI
         /// <summary>
         /// Кнопка закрытия в меню File
         /// </summary>
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -88,7 +88,7 @@ namespace NoteAppUI
         /// </summary>
         public void AddNote()
         {
-            var addForm = new AddAndEditForm();
+            var addForm = new NoteForm();
             addForm.Note = new Note();
 
 
@@ -117,7 +117,7 @@ namespace NoteAppUI
             }
 
             var note = _project.Note[index];
-            var addAndEditForm = new AddAndEditForm(); //Создаем форму
+            var addAndEditForm = new NoteForm(); //Создаем форму
             addAndEditForm.Note = note; //Передаем форме данные
             var dialogResult = addAndEditForm.ShowDialog(); //Отображаем форму для редактирования
             if (dialogResult == DialogResult.OK)
@@ -169,7 +169,7 @@ namespace NoteAppUI
         /// <summary>
         /// Кнопка удаления в меню Edit
         /// </summary>
-        private void deleteNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DeleteNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveNote();
         }
@@ -185,7 +185,7 @@ namespace NoteAppUI
         /// <summary>
         /// Кнопка добавления в меню Edit
         /// </summary>
-        private void addNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void AddNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddNote();
         }
@@ -193,7 +193,7 @@ namespace NoteAppUI
         /// <summary>
         /// Кнопка редактирования в меню Edit
         /// </summary>
-        private void editNoteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void EditNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EditNote();   
         }

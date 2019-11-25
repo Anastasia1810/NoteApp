@@ -1,6 +1,6 @@
 ﻿namespace NoteAppUI
 {
-    partial class NoteAppForm
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NoteAppForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,7 +87,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(193, 22);
             this.exitToolStripMenuItem.Text = "Exit                      Alt+F4";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
             // 
             // eToolStripMenuItem
             // 
@@ -102,23 +102,23 @@
             // addNoteToolStripMenuItem
             // 
             this.addNoteToolStripMenuItem.Name = "addNoteToolStripMenuItem";
-            this.addNoteToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.addNoteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addNoteToolStripMenuItem.Text = "Add Note";
-            this.addNoteToolStripMenuItem.Click += new System.EventHandler(this.addNoteToolStripMenuItem_Click);
+            this.addNoteToolStripMenuItem.Click += new System.EventHandler(this.AddNoteToolStripMenuItem_Click);
             // 
             // editNoteToolStripMenuItem
             // 
             this.editNoteToolStripMenuItem.Name = "editNoteToolStripMenuItem";
-            this.editNoteToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.editNoteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editNoteToolStripMenuItem.Text = "Edit Note";
-            this.editNoteToolStripMenuItem.Click += new System.EventHandler(this.editNoteToolStripMenuItem_Click);
+            this.editNoteToolStripMenuItem.Click += new System.EventHandler(this.EditNoteToolStripMenuItem_Click);
             // 
             // deleteNoteToolStripMenuItem
             // 
             this.deleteNoteToolStripMenuItem.Name = "deleteNoteToolStripMenuItem";
-            this.deleteNoteToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
+            this.deleteNoteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteNoteToolStripMenuItem.Text = "Remove Note";
-            this.deleteNoteToolStripMenuItem.Click += new System.EventHandler(this.deleteNoteToolStripMenuItem_Click);
+            this.deleteNoteToolStripMenuItem.Click += new System.EventHandler(this.DeleteNoteToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -133,7 +133,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
             this.aboutToolStripMenuItem.Text = "About                        F1";
-            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.AboutToolStripMenuItem_Click);
             // 
             // CreatedDateTime
             // 
@@ -218,7 +218,7 @@
             this.NotesListBox.Location = new System.Drawing.Point(6, 44);
             this.NotesListBox.Name = "NotesListBox";
             this.NotesListBox.Size = new System.Drawing.Size(251, 342);
-            this.NotesListBox.TabIndex = 16;
+            this.NotesListBox.TabIndex = 13;
             this.NotesListBox.SelectedIndexChanged += new System.EventHandler(this.NotesListBox_SelectedIndexChanged);
             // 
             // CategoryComboBox
@@ -230,7 +230,7 @@
             this.CategoryComboBox.Location = new System.Drawing.Point(90, 17);
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(167, 21);
-            this.CategoryComboBox.TabIndex = 15;
+            this.CategoryComboBox.TabIndex = 12;
             // 
             // label1
             // 
@@ -263,7 +263,7 @@
             this.DeleteButton.Location = new System.Drawing.Point(60, 5);
             this.DeleteButton.Name = "DeleteButton";
             this.DeleteButton.Size = new System.Drawing.Size(23, 23);
-            this.DeleteButton.TabIndex = 14;
+            this.DeleteButton.TabIndex = 16;
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
             // 
@@ -277,7 +277,7 @@
             this.EditButton.Location = new System.Drawing.Point(31, 5);
             this.EditButton.Name = "EditButton";
             this.EditButton.Size = new System.Drawing.Size(23, 23);
-            this.EditButton.TabIndex = 13;
+            this.EditButton.TabIndex = 15;
             this.EditButton.UseVisualStyleBackColor = true;
             this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
@@ -293,7 +293,7 @@
             this.AddButton.Name = "AddButton";
             this.AddButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.AddButton.Size = new System.Drawing.Size(22, 23);
-            this.AddButton.TabIndex = 12;
+            this.AddButton.TabIndex = 14;
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
@@ -322,7 +322,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.CreatedDateTime);
             this.splitContainer1.Size = new System.Drawing.Size(800, 426);
             this.splitContainer1.SplitterDistance = 264;
-            this.splitContainer1.TabIndex = 13;
+            this.splitContainer1.TabIndex = 11;
             // 
             // NoteAppForm
             // 

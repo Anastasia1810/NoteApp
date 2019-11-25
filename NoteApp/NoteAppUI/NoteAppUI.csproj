@@ -55,28 +55,28 @@
     <Compile Include="AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddAndEditForm.cs">
+    <Compile Include="NoteForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddAndEditForm.Designer.cs">
-      <DependentUpon>AddAndEditForm.cs</DependentUpon>
+    <Compile Include="NoteForm.Designer.cs">
+      <DependentUpon>NoteForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NoteAppForm.cs">
+    <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NoteAppForm.Designer.cs">
-      <DependentUpon>NoteAppForm.cs</DependentUpon>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AddAndEditForm.resx">
-      <DependentUpon>AddAndEditForm.cs</DependentUpon>
+    <EmbeddedResource Include="NoteForm.resx">
+      <DependentUpon>NoteForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NoteAppForm.resx">
-      <DependentUpon>NoteAppForm.cs</DependentUpon>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,7 +103,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NoteApp\NoteApp.csproj">
-      <Project>{b831369e-e31b-441d-90a3-09a9147a4130}</Project>
+      <Project>{81db5344-357e-4755-a778-818ae8fbbfc1}</Project>
       <Name>NoteApp</Name>
     </ProjectReference>
   </ItemGroup>

@@ -11,7 +11,7 @@ using NoteApp;
 
 namespace NoteAppUI
 {
-    public partial class AddAndEditForm : Form
+    public partial class NoteForm : Form
     {
         /// <summary>
         /// Поле для временного хранения переданных данных
@@ -52,7 +52,7 @@ namespace NoteAppUI
             }
         
 
-        public AddAndEditForm()
+        public NoteForm()
         {
             InitializeComponent();
             AddCategoryBox();
