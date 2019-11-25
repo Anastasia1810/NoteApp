@@ -56,8 +56,6 @@ namespace NoteAppUI
             {
                 NotesListBox.Items.Add(note.Title);
             }
-
-            ProjectManager.SaveToFile(_project);
         }
 
         /// <summary>
@@ -151,8 +149,8 @@ namespace NoteAppUI
 
             var result = new System.Windows.Forms.DialogResult();
             result = MessageBox.Show(
-                @"Вы действительно хотите удалить заметку: " +
-                _project.Note[index].Title + " ?", "Удаление заметки",
+                @"Do you really want to remove this note: " +
+                _project.Note[index].Title + " ?", "Remove note",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
             if (result == DialogResult.Yes)
@@ -166,16 +164,18 @@ namespace NoteAppUI
                 }
 
             }
-            
-           
         }
+
+        /// <summary>
+        /// Кнопка удаления в меню Edit
+        /// </summary>
         private void deleteNoteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RemoveNote();
         }
 
         /// <summary>
-        /// Кнопка удаления в меню Edit
+        /// Кнопка удаления заметки
         /// </summary>
         private void DeleteButton_Click(object sender, EventArgs e)
         {

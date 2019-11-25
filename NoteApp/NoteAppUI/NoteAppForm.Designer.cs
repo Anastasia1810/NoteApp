@@ -50,9 +50,9 @@
             this.CategoryComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.AddButton = new System.Windows.Forms.Button();
-            this.EditButton = new System.Windows.Forms.Button();
             this.DeleteButton = new System.Windows.Forms.Button();
+            this.EditButton = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -205,7 +205,7 @@
             this.TextRichTextBox1.Enabled = false;
             this.TextRichTextBox1.Location = new System.Drawing.Point(6, 73);
             this.TextRichTextBox1.Name = "TextRichTextBox1";
-            this.TextRichTextBox1.Size = new System.Drawing.Size(510, 369);
+            this.TextRichTextBox1.Size = new System.Drawing.Size(510, 347);
             this.TextRichTextBox1.TabIndex = 26;
             this.TextRichTextBox1.Text = "";
             // 
@@ -217,7 +217,7 @@
             this.NotesListBox.FormattingEnabled = true;
             this.NotesListBox.Location = new System.Drawing.Point(6, 44);
             this.NotesListBox.Name = "NotesListBox";
-            this.NotesListBox.Size = new System.Drawing.Size(251, 329);
+            this.NotesListBox.Size = new System.Drawing.Size(251, 342);
             this.NotesListBox.TabIndex = 16;
             this.NotesListBox.SelectedIndexChanged += new System.EventHandler(this.NotesListBox_SelectedIndexChanged);
             // 
@@ -231,7 +231,6 @@
             this.CategoryComboBox.Name = "CategoryComboBox";
             this.CategoryComboBox.Size = new System.Drawing.Size(167, 21);
             this.CategoryComboBox.TabIndex = 15;
-          
             // 
             // label1
             // 
@@ -249,47 +248,54 @@
             this.panel1.Controls.Add(this.DeleteButton);
             this.panel1.Controls.Add(this.EditButton);
             this.panel1.Controls.Add(this.AddButton);
-            this.panel1.Location = new System.Drawing.Point(6, 376);
+            this.panel1.Location = new System.Drawing.Point(6, 392);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(251, 47);
+            this.panel1.Size = new System.Drawing.Size(251, 31);
             this.panel1.TabIndex = 15;
-            // 
-            // AddButton
-            // 
-            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
-            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.AddButton.Location = new System.Drawing.Point(3, 2);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.AddButton.Size = new System.Drawing.Size(36, 42);
-            this.AddButton.TabIndex = 12;
-            this.AddButton.UseVisualStyleBackColor = true;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
-            // 
-            // EditButton
-            // 
-            this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
-            this.EditButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.EditButton.Location = new System.Drawing.Point(45, 2);
-            this.EditButton.Name = "EditButton";
-            this.EditButton.Size = new System.Drawing.Size(36, 42);
-            this.EditButton.TabIndex = 13;
-            this.EditButton.UseVisualStyleBackColor = true;
-            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
             // 
             // DeleteButton
             // 
             this.DeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DeleteButton.FlatAppearance.BorderSize = 0;
+            this.DeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteButton.Image = ((System.Drawing.Image)(resources.GetObject("DeleteButton.Image")));
             this.DeleteButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.DeleteButton.Location = new System.Drawing.Point(87, 2);
+            this.DeleteButton.Location = new System.Drawing.Point(60, 5);
             this.DeleteButton.Name = "DeleteButton";
-            this.DeleteButton.Size = new System.Drawing.Size(37, 42);
+            this.DeleteButton.Size = new System.Drawing.Size(23, 23);
             this.DeleteButton.TabIndex = 14;
             this.DeleteButton.UseVisualStyleBackColor = true;
             this.DeleteButton.Click += new System.EventHandler(this.DeleteButton_Click);
+            // 
+            // EditButton
+            // 
+            this.EditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.EditButton.FlatAppearance.BorderSize = 0;
+            this.EditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditButton.Image = ((System.Drawing.Image)(resources.GetObject("EditButton.Image")));
+            this.EditButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.EditButton.Location = new System.Drawing.Point(31, 5);
+            this.EditButton.Name = "EditButton";
+            this.EditButton.Size = new System.Drawing.Size(23, 23);
+            this.EditButton.TabIndex = 13;
+            this.EditButton.UseVisualStyleBackColor = true;
+            this.EditButton.Click += new System.EventHandler(this.EditButton_Click);
+            // 
+            // AddButton
+            // 
+            this.AddButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.AddButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.AddButton.FlatAppearance.BorderSize = 0;
+            this.AddButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddButton.Image = ((System.Drawing.Image)(resources.GetObject("AddButton.Image")));
+            this.AddButton.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
+            this.AddButton.Location = new System.Drawing.Point(3, 5);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.AddButton.Size = new System.Drawing.Size(22, 23);
+            this.AddButton.TabIndex = 12;
+            this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // splitContainer1
             // 
@@ -368,8 +374,8 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button EditButton;
-        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Button AddButton;
     }
 }
 

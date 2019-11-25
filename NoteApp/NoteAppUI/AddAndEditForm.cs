@@ -14,12 +14,12 @@ namespace NoteAppUI
     public partial class AddAndEditForm : Form
     {
         /// <summary>
-        /// Поле для передачи данных.
+        /// Поле для временного хранения переданных данных
         /// </summary>
         private Note _note;
 
         /// <summary>
-        /// Определение поля _note.
+        /// Свойство, через которое будут передаваться данные извне
         /// </summary>
         public Note Note {
             get
@@ -64,13 +64,12 @@ namespace NoteAppUI
         /// </summary>
         private void AddCategoryBox()
         {
-            CategoryComboBox.Items.Add(CategoryNote.Work);
-            CategoryComboBox.Items.Add(CategoryNote.Home);
-            CategoryComboBox.Items.Add(CategoryNote.HeathAndSport);
-            CategoryComboBox.Items.Add(CategoryNote.People);
-            CategoryComboBox.Items.Add(CategoryNote.Documents);
-            CategoryComboBox.Items.Add(CategoryNote.Finance);
-            CategoryComboBox.Items.Add(CategoryNote.Different);
+            var values = Enum.GetValues(typeof(CategoryNote));
+            foreach (var value in values)
+            {
+                CategoryComboBox.Items.Add(value);
+                CategoryComboBox.SelectedIndex = 0;
+            }
         }
 
         /// <summary>
@@ -103,11 +102,12 @@ namespace NoteAppUI
         {
             if (TitleTextBox.Text.Length > 50)
             {
-                TitleTextBox.ForeColor = Color.Red;
+                TitleTextBox.BackColor = Color.LightSalmon;
+                MessageBox.Show("Название заметки должно быть меньше 50 символов", "Некорректный ввод данных");
             }
             else
             {
-                TitleTextBox.ForeColor = Color.Black;
+                TitleTextBox.BackColor = Color.White;
             }
         }
     }
