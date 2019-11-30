@@ -37,7 +37,10 @@ namespace NoteApp
         {
             Note = new List<Note>();
         }
-
+        public Project(List<Note> noteList)
+        {
+            Notes = noteList;
+        }
 
     }
 }

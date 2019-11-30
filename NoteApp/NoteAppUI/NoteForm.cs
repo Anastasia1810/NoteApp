@@ -37,19 +37,9 @@ namespace NoteAppUI
                     CategoryComboBox.SelectedItem = value.CategoryNote;
                     CreatedDateTimePicker.Value = value.DateOfCreation;
                     ModifiedDateTimePicker.Value = value.DateOfChange;
-                }
-                else
-                {
-                    TitleTextBox.Text= "Без названия";
-                    NoteRichTextBox.Text= "";
-                    CategoryComboBox.SelectedItem = "Different";
-                    CreatedDateTimePicker.Value = DateTime.Now;
-                    ModifiedDateTimePicker.Value = DateTime.Now;
-                }
-               
-                
+                }             
             }
-            }
+         }
         
 
         public NoteForm()
@@ -77,12 +67,13 @@ namespace NoteAppUI
         /// </summary>
         private void OkButton_Click(object sender, EventArgs e)
         {
-            DialogResult = DialogResult.OK;
-            this.Close();
             _note.CategoryNote = (CategoryNote)CategoryComboBox.SelectedItem;
             _note.Text = NoteRichTextBox.Text;
             _note.Title = TitleTextBox.Text;
             _note.DateOfChange = DateTime.Now;
+            DialogResult = DialogResult.OK;
+            this.Close();
+            
         }
 
         /// <summary>
@@ -104,6 +95,11 @@ namespace NoteAppUI
             {
                 TitleTextBox.BackColor = Color.LightSalmon;
                 MessageBox.Show("Название заметки должно быть меньше 50 символов", "Некорректный ввод данных");
+            }
+            if (TitleTextBox.Text.Length == 0)
+            {
+                TitleTextBox.BackColor = Color.LightSalmon;
+                MessageBox.Show("Поле должно быть заполнено", "Некорректный ввод данных");
             }
             else
             {
