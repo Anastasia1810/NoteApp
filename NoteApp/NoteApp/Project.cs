@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-
+using System.Linq;
 
 namespace NoteApp
 {
@@ -42,5 +42,42 @@ namespace NoteApp
             Notes = noteList;
         }
 
+        /// <summary>
+        /// Сортировка списка заметок по времени изменения и категории.
+        /// </summary>
+        public List<Note> SortedNotesCategory(CategoryNote category)
+        {
+            List<Note> notes = Notes.Where(note => note.CategoryNote == category)
+                .OrderByDescending(note => note.DateOfChange).ToList();
+
+            return notes;
+        }
+
+        /// <summary>
+        /// Сортировка списка заметок по времени изменения
+        /// </summary>
+        public List<Note> SortedNotes()
+        {
+            List<Note> notes = Notes.OrderByDescending(note => note.DateOfChange).ToList();
+
+            return notes;
+        }
+
+        /// <summary>
+        /// Свойство "Текущая заметка"
+        /// </summary>
+        public Note CurrentNote
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Свойство "Текущая категория"
+        /// </summary>
+        public string CurrentCategory
+        {
+            get; set;
+        }
     }
 }
