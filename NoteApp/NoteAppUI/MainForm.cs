@@ -8,7 +8,11 @@ namespace NoteAppUI
 {
     public partial class MainForm : Form
     {
-       
+        /// <summary>
+        /// Поле для хранения пути файла.
+        /// </summary>
+        private readonly string _fileName = Environment.GetFolderPath(Environment.SpecialFolder.Personal) + @"\NoteApp.json";
+
         /// <summary>
         /// Объект класса
         /// </summary>
@@ -38,7 +42,7 @@ namespace NoteAppUI
         /// </summary>
         private void Form1_Load(object sender, EventArgs e)
         {
-            _project = ProjectManager.LoadFromFile();
+            _project = ProjectManager.LoadFromFile(_fileName);
             UpdateNotesListBox(_project);
             if (_project.Note.Count >= 1)
             {
@@ -63,7 +67,7 @@ namespace NoteAppUI
         /// </summary>
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ProjectManager.SaveToFile(_project);
+            ProjectManager.SaveToFile(_project, _fileName);
         }
 
         /// <summary>
@@ -101,7 +105,7 @@ namespace NoteAppUI
                 NotesListBox.Items.Add(newNote.Title);
             }
 
-            ProjectManager.SaveToFile(_project);
+            ProjectManager.SaveToFile(_project,_fileName);
         }
 
         /// <summary>
@@ -133,7 +137,7 @@ namespace NoteAppUI
                 NotesListBox.Items.Insert(index, title);
             }
 
-            ProjectManager.SaveToFile(_project);
+            ProjectManager.SaveToFile(_project, _fileName);
         }
 
         /// <summary>
@@ -157,7 +161,7 @@ namespace NoteAppUI
             {
                 NotesListBox.Items.RemoveAt(index);
                 _project.Note.RemoveAt(index);
-                ProjectManager.SaveToFile(_project);
+                ProjectManager.SaveToFile(_project, _fileName);
                 if (_project.Note.Count >= 1)
                 {
                     NotesListBox.SetSelected(0, true);

@@ -12,25 +12,15 @@ namespace NoteApp
     public class ProjectManager
     {
         /// <summary>
-        /// Имя файла для сохранения и загрузки.
-        /// </summary>
-        private const string _name = @"\NoteApp.notes";
-
-        /// <summary>
-        /// Путь к папке с документами.
-        /// </summary>
-        private static readonly string _path =
-        Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-
-        /// <summary>
         /// Полный путь к файлу.
         /// </summary>
-        private static readonly string _file = _path + _name;
+        private readonly string _fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\NoteApp.note";
+
 
         /// <summary>
         /// Метод, сохраняющий данные в файл.
         /// </summary>
-        public static void SaveToFile(Project data)
+        public static void SaveToFile(Project data, string _file)
         {
             //Создаем экземпляр сериализатора.
             var serializer = new JsonSerializer { Formatting = Formatting.Indented };
@@ -47,7 +37,7 @@ namespace NoteApp
         /// <summary>
         /// Метод, загружающий данные из файла.
         /// </summary>
-        public static Project LoadFromFile()
+        public static Project LoadFromFile(string _file)
         {
             //Создаем переменную, в которую поместим результат десериализации.
             Project project = null;

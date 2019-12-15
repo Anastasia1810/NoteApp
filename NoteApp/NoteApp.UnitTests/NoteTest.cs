@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using NoteApp;
 
 namespace NoteApp.UnitTests
 {
@@ -52,11 +51,11 @@ namespace NoteApp.UnitTests
         [Test(Description = "Позитивный тест геттера DateOfCreation")]
         public void TestDateOfCreationGet_CorrectValue()
         {
-            var dateNow = DateTime.Now;
+            var expected = DateTime.Now;
             var note = new Note();
             var actual = note.DateOfCreation;
 
-            Assert.AreEqual(dateNow, actual, "Геттер DateOfCreation возвращает неправильное название");
+            Assert.AreEqual(expected, actual, "Геттер DateOfCreation возвращает неправильное название");
         }
 
         [Test(Description = "Позитивный тест геттера DateOfChange")]
@@ -90,7 +89,7 @@ namespace NoteApp.UnitTests
             time = time.AddDays(3);
             Assert.Throws<ArgumentException>(
             () => { note.DateOfChange= time; },
-            "Должно возникать исключение, если дата создания больше текущей");
+            "Должно возникать исключение, если дата редактирования больше текущей");
         }
 
         [Test(Description = "Дата редактирования меньше даты создания")]
@@ -101,10 +100,10 @@ namespace NoteApp.UnitTests
             time = time.AddDays(-1);
             Assert.Throws<ArgumentException>(
             () => { note.DateOfChange = time; },
-            "Должно возникать исключение, если дата создания больше текущей");
+            "Должно возникать исключение, если дата редактирования меньше создания");
         }
 
-        [Test(Description = "Позитивный тест CategoryNote")]
+        [Test(Description = "Позитивный тест геттера CategoryNote")]
         public void TestCategoryNoteGet_CorrectValue()
         {
             var expected = CategoryNote.Work;
@@ -112,7 +111,7 @@ namespace NoteApp.UnitTests
             note.CategoryNote = expected;
             var actual = note.CategoryNote;
 
-            Assert.AreEqual(expected, actual, "Геттер Text возвращает неправильное название");
+            Assert.AreEqual(expected, actual, "Геттер CategoryNote возвращает неправильное название");
         }
 
         [Test(Description = "Позитивный тест Clone")]
@@ -129,7 +128,6 @@ namespace NoteApp.UnitTests
             Assert.AreEqual(expected.Text, actual.Text, "");
             Assert.AreEqual(expected.Title, actual.Title, "");
             Assert.AreEqual(expected.CategoryNote, actual.CategoryNote, "");
-            Assert.AreEqual(expected.DateOfCreation, actual.DateOfCreation, "");
         }
     }
 }

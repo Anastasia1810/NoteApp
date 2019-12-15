@@ -59,7 +59,6 @@ namespace NoteApp
             set
             {
                 _text = value;
-                _dateOfChange = DateTime.Now;
             }
         }
 
@@ -80,20 +79,15 @@ namespace NoteApp
                     throw new ArgumentException("Название заметки должно быть меньше 50 знаков");
                 }
 
-                if (string.IsNullOrWhiteSpace(value))
-                {
+                if (value.Length == 0)
+                { 
                     throw new ArgumentException("Заголовок не может быть пустым!");
                 }
 
                 _title = value;
-                _dateOfChange = DateTime.Now;
-
             }
         }
-    
-
-
-
+  
         /// <summary>
         /// Возвращает и задает дату создания заметки.
         /// </summary>
@@ -104,14 +98,14 @@ namespace NoteApp
                 return _dateOfCreation;
             }
 
-             set
+            set
             {
                 if (value > DateTime.Now)
                 {
                     throw new ArgumentException("Дата создания не может быть больше чем текущая!");
                 }
 
-                _dateOfCreation = DateTime.Now;
+               _dateOfCreation = value;
             }
         }
 
@@ -137,7 +131,7 @@ namespace NoteApp
                     throw new ArgumentException("Дата редактирования не может быть больше чем текущая!");
                 }
 
-                _dateOfChange = DateTime.Now;
+                _dateOfChange = value;
             }
         }
 
@@ -154,7 +148,6 @@ namespace NoteApp
             set
             {
                 _categoryNote = value;
-                _dateOfChange = DateTime.Now;
             }
         }
 
@@ -166,6 +159,7 @@ namespace NoteApp
                 Text = Text,
                 CategoryNote = CategoryNote,
                 DateOfCreation = DateOfCreation,
+                DateOfChange = DateOfChange,
             };
         }
     }

@@ -31,13 +31,13 @@ namespace NoteApp.UnitTests
         {
             var note = new List<Note>
             {
-                new Note {Title = "Title 1"},
-                new Note {Title = "Title 2"},
-                new Note {Title = "Title 3"}
+                new Note {Title = "Заметка 1"},
+                new Note {Title = "Заметка 2"},
+                new Note {Title = "Заметка 3"}
             };
 
-            var project = new Project(note);
-            Assert.AreEqual(project.Note, note, "");
+            var _project = new Project(note);
+            Assert.AreEqual(_project.Note, note, "");
         }
     }
 }
