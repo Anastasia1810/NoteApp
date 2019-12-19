@@ -108,4 +108,21 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>rd "$(SolutionDir)InstallScripts\Output"
+md "$(SolutionDir)InstallScripts\Release"
+md "$(SolutionDir)InstallScripts\Installers"
+xcopy "$(ProjectDir)$(OutDir)*.dll" "$(SolutionDir)InstallScripts\Release"
+xcopy "$(ProjectDir)$(OutDir)*.exe" "$(SolutionDir)InstallScripts\Release"
+xcopy "$(SolutionDir)icons\icon.ico" "$(SolutionDir)InstallScripts\Release"
+"D:\Inno Setup 6\ISCC.exe" "$(SolutionDir)InstallScripts\NoteApp.iss"
+xcopy "$(SolutionDir)InstallScripts\Output\*.exe" "$(SolutionDir)InstallScripts\Installers\"
+del "$(SolutionDir)InstallScripts\Release\*.dll"
+del "$(SolutionDir)InstallScripts\Release\*.exe"
+del "$(SolutionDir)InstallScripts\Release\icon.ico"
+del "$(SolutionDir)InstallScripts\Release\NoteApp.exe.config"
+rd "$(SolutionDir)InstallScripts\Release"
+
+</PostBuildEvent>
+  </PropertyGroup>
 </Project>

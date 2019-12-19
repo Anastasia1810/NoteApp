@@ -14,8 +14,8 @@ namespace NoteApp
         /// <summary>
         /// Полный путь к файлу.
         /// </summary>
-        private readonly string _fileName = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\NoteApp.note";
-
+        private readonly string _file = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\NoteApp.note";
+        
 
         /// <summary>
         /// Метод, сохраняющий данные в файл.
@@ -39,8 +39,15 @@ namespace NoteApp
         /// </summary>
         public static Project LoadFromFile(string _file)
         {
+
             //Создаем переменную, в которую поместим результат десериализации.
             Project project = null;
+
+            if (!File.Exists(_file))
+            {
+                return new Project();
+            }
+            
 
             //Создаем экземпляр сериализатора.
             var serializer = new JsonSerializer { Formatting = Formatting.Indented };
